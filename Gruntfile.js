@@ -16,10 +16,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-open');
-  grunt.loadNpmTasks('grunt-ngmin');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   grunt.initConfig({
     watch: {
+      css: {
+        files: '**/*.scss',
+        tasks: ['sass']
+      },
       livereload: {
         files: [
           '{,*/}*.html',
@@ -59,17 +63,26 @@ module.exports = function(grunt) {
         url: 'http://localhost:<%= connect.options.port %>/'
       }
     },
-
-    // ngmin: {
-    //   controllers: {
-    //     src: ['lifesalestool/scripts/controllers/**/*.js'],
-    //     dest: 'dist-ngmin/lifesalestool/controllers/'
-    //   },
-    //   directives: {
-    //     src: ['lifesalestool/scripts/directives/**/*.js'],
-    //     dest: 'dist-ngmin/lifesalestool/directives.js'
-    //   }
-    // }
+    sass: {
+      dev: {
+        options: {
+          style: 'expanded',
+          compass: true
+        },
+        files: {
+          'app/css/style.css': 'sass/style.scss'
+        }
+      },
+      dist: {
+        options: {
+          style: 'expanded',
+          compass: true
+        },
+        files: {
+          'app/css/style.css': 'sass/style.scss'
+        }
+      }
+    }
   });
 
   grunt.registerTask('server', function() {
@@ -81,5 +94,7 @@ module.exports = function(grunt) {
     ]);
   });
 
+
+  grunt.registerTask('default', ['sass']);
   grunt.registerTask('default', ['server']);
 };
