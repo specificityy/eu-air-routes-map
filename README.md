@@ -1,5 +1,5 @@
 # ryanair-routes-map
-Ryanair EU routes map with D3.js and AngularJS
+EU routes map with D3.js and AngularJS
 
 In order to run it you need to have the grunt-cli npm package installed.
 
