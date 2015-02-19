@@ -1,6 +1,6 @@
 {
-  "name": "air-routes",
-  "description": "test2",
+  "name": "ryanair-routes-map",
+  "description": "Map of Ryanair's Europe routes",
   "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
@@ -9,8 +9,8 @@
     "grunt": "~0.4.2",
     "grunt-connect-proxy": "~0.1.8",
     "grunt-contrib-connect": "~0.6.0",
+    "grunt-contrib-sass": "^0.9.2",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-ngmin": "0.0.3",
     "grunt-open": "~0.2.3"
   },
   "engines": {

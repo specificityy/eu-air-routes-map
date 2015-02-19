@@ -1,63 +1,64 @@
 <html>
 
 <head>
-    <script src="http://d3js.org/d3.v3.js"></script>
-    <script src="http://d3js.org/topojson.v1.js"></script>
-    <style>
-    svg {
-        background: #fff;
-    }
-    .sphere {
-        fill: #fff;
-    }
-    .land {
-        fill: #eee;
-    }
-    .boundary {
-        fill: none;
-        stroke: #fff;
-        stroke-linejoin: round;
-        stroke-linecap: round;
-        vector-effect: non-scaling-stroke;
-    }
-    /*.overlay {
-        fill: none;
-        pointer-events: all;
-    }*/
-    
-    .airport-poi {
-        cursor: pointer;
-        /*fill: #BBDEFB;*/
-    }
-    .airport-poi:after {
-      content: 'abc';
-    }
-    /*.airport-poi-active {
-      fill: #3396DB;
-    }*/
-    div.tooltip {
-        position: absolute;
-        max-width: 200px;
-        height: auto;
-        padding: 5px;
-        background-color: white;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-        pointer-events: none;
-        /* MUy IMPORTANTE! */
-        
-        font-family: sans-serif;
-        font-size: 12px;
-    }
-    </style>
+    <title>Ryanair Routes Map</title>
+    <link rel="stylesheet" href="app/css/style.css">
+    <script src="//d3js.org/d3.v3.js"></script>
+    <script src="//d3js.org/topojson.v1.js"></script>
 </head>
 
 <body>
-    <script src="init.js"></script>
+    <!-- HEADER  -->
+    <header class="l-header t-beveled">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <h1 class="logo"><a href="index.html">EU Routes Map</a></h1>
+                </div>
+                <div class="col-lg-9">
+                    <ul class="align-right l-list-divided">
+                        <li id="contact-info">
+                            <p><small>Questions?</small>
+                            </p>
+                            <p>Call 1-800-0000</p>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-primary">Book Now</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div ng-view id="main-container" class="container-fluid"></div>
+    <script data-main="app/js/main.js" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.min.js"></script>
+
+
+
+    <!-- FOOTER -->
+    <footer class="l-footer container t-margin text-center">
+        <!-- CALL-TO-ACTION -->
+        <section>
+            <div class="container t-margin l-callout t-callout clearfix">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2>Consectetur adipisicing elit. Fuga accusantium quas aspernatur.</h2>
+                        <h3>Omnis dicta id hic veritatis animi?</h3>
+                    </div>
+                    <div class="col-lg-4 text-right">
+                        <button class="btn btn-primary" type="button">Buy Now</button>
+                        <button class="btn" type="button">Try it Free</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <p>&copy; Copyright 2014 Product name. <br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia harum facere aspernatur voluptates, officiis necessitatibus laborum nostrum cupiditate, doloribus soluta, alias recusandae eveniet quo rem vitae facilis. Enim, asperiores, dolore.</p>
+    </footer>
+
+
 </body>
 
 </html>

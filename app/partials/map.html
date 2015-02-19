@@ -1,10 +1,20 @@
-<!-- <div class="tooltip arrow-box"></div> -->
-<div style="position:absolute">
-  <input type="text" id="search" ng-model='search' ng-click='searchAirport()'>
-  <button id="btn">Go</button>
+<div class="row" ng-if='airportsLoaded'>
+	<div class="col-md-3 search-div">
+
+	<input type="text" id="search" class="form-control" ng-keyup="checkAirport($event)" ng-model="search" ng-bind="data.search" placeholder='Search..'>
+	<!-- <div autocomplete='off' auto-complete search-list='airports' search-display='name' model="search"></div> -->
+	<button class="btn btn-primary btn-search" ng-click='searchAirport()'>Search</button>
+
+	</div>
 </div>
-<div>
+
+<!-- <div>
 	<button id="zoom_in" class="zoom-btn">+</button>
 	<button id="zoom_out" class="zoom-btn">-</button>
 </div>
- <div id="map" eu-route-map></div>
+ -->
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<div id="map" eu-route-map></div>
+	</div>
+</div>

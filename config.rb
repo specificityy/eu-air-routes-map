@@ -1,17 +1,9 @@
-require 'compass/import-once/activate'
-# Require any additional compass plugins here.
 
-# Set this to the root of your project when deployed:
-http_path = "/"
-css_dir = "css"
-sass_dir = "sass"
-images_dir = "images"
-javascripts_dir = "javascript"
-
-output_style = :expanded
-
-relative_assets = true
-
-line_comments = false
-
-preferred_syntax = :scss
+css_dir = "app/css" # by Compass.app 
+sass_dir = "sass" # by Compass.app 
+images_dir = "images" # by Compass.app 
+output_style = :expanded # by Compass.app 
+relative_assets = false # by Compass.app 
+line_comments = true # by Compass.app 
+sass_options = {:debug_info=>false} # by Compass.app 
+sourcemap = false # by Compass.app 

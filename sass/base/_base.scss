@@ -15,18 +15,3 @@ p {
 		text-decoration: none;
 	}
 }
-
-blockquote {
-	margin: 0;
-
-	font-style: italic;
-
-	cite {
-		font-size: .75rem;
-		font-style: normal;
-
-		&:before {
-			content: "- ";
-		}
-	}
-}

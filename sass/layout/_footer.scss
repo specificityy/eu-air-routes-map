@@ -4,25 +4,20 @@
  * ----------------------------------------------------------------------------------------
  */
 
-.l-footer {}
-
-.l-list-inline {
-	@extend l-list-unstyled;
-
-	li {
-		display: inline;
+.l-footer {
+	/*position: absolute;*/
+	width: 100%;
+	padding:0;
+	p {
+		color: $color-light-text;
+		font-size: 0.8rem;
 	}
 }
 
-.social-icon {
-	display: inline-block;
-	width: 3rem;
-	height: 3rem;
+.l-list-inline {
+	@include list-unstyled;
 
-	font-size: 1.5rem;
-	text-align: center;
-
-	i.fa {
-		margin-top: .75rem;
+	li {
+		display: inline;
 	}
 }

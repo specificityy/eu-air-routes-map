@@ -2,18 +2,15 @@
  * ----------------------------------------------------------------------------------------
  * style.scss
  *
- * Simple CSS framework made for Tuts+.
- *
- * Author: Adi Purdila
+ * Author: Wilson Jimenez
  *
  * This framework is inspired by Jonathan Path's framework.
- * Many thanks!
  * https://github.com/jonathanpath/SASS-SMACSS
  * ----------------------------------------------------------------------------------------
  */
 
 /* Compass */
-@import "compass";
+@import "compass"; 
 
 /* Utilities */
 @import "utilities/settings";
@@ -30,12 +27,11 @@
 /* Fonts */
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
 @import url("http://fonts.googleapis.com/css?family=Dosis:400,700");
-@import "fonts/font-awesome";
 
 /* Layout */
+@import "layout/main";
 @import "layout/nav";
 @import "layout/header";
-@import "layout/main";
 @import "layout/footer";
 
 /* Modules */
@@ -47,6 +43,7 @@
 
 /* Theme */
 @import "theme/theme";
+
 
 
 
