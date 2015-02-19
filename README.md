@@ -1,15 +1,15 @@
 # EU routes map with D3.js and AngularJS
 
-In order to run it you need to have the grunt-cli npm package installed.
-
-https://www.npmjs.com/package/grunt-cli
+In order to run it you need to have <a href='http://nodejs.org/download/'>NPM</a> installed.
 
 Then download the source code.
 
 Open a command window and navigate to the project's directory.
 
-Enter ```npm install``` from the command line.
+In case you don't have <a href='http://gruntjs.com/'>Grunt</a> installed, run this command first ```npm install -g grunt-cli```
 
-And enter this command ```grunt```
+Then enter ```npm install``` from the command line.
+
+And enter this command ```grunt``` to run the server. 
 
 That should open the app in your default browser.
