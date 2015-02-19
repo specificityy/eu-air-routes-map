@@ -1,4 +1,4 @@
-# EU routes map with D3.js and AngularJS
+# EU Airports routes map with D3.js and AngularJS
 
 In order to run it you need to have <a href='http://nodejs.org/download/'>NPM</a> installed.
 
