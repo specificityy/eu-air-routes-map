@@ -1,65 +1,86 @@
 <html>
 
-<head>
+  <head>
     <title>Ryanair Routes Map</title>
     <link rel="stylesheet" href="app/css/style.css">
     <link rel="shortcut icon" href="favicon.ico" />
     <script src="//d3js.org/d3.v3.js"></script>
     <script src="//d3js.org/topojson.v1.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- HEADER  -->
     <header class="l-header t-beveled">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <h1 class="logo"><a href="index.html">EU Routes Map</a></h1>
-                </div>
-                <div class="col-lg-9">
-                    <ul class="align-right l-list-divided">
-                        <li id="contact-info">
-                            <p><small>Questions?</small>
-                            </p>
-                            <p>Call 1-800-0000</p>
-                        </li>
-                        <li>
-                            <button type="button" class="btn btn-primary">Book Now</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <h1 class="logo"><a href="index.html">EU Routes Map</a></h1>
+          </div>
+          <div class="col-lg-9">
+            <ul class="align-right l-list-divided">
+              <li id="contact-info">
+                <p><small>Questions?</small>
+                </p>
+                <p>Call 1-800-0000</p>
+              </li>
+              <li>
+                <button type="button" class="btn btn-primary">Book Now</button>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </header>
 
-    <div ng-view id="main-container" class="container-fluid"></div>
+
+    <!-- CONTENT -->
+    <div ng-controller="mapCtrl" id="main-container" class="container-fluid">
+      <div class="row" ng-if='airportsLoaded'>
+        <div class="col-md-3 search-div">
+
+          <input type="text" id="search" class="form-control" ng-keyup="checkAirport($event)" ng-model="vm.search" ng-bind="vm.search" placeholder='Search..'>
+          <!-- <div autocomplete='off' auto-complete search-list='airports' search-display='name' model="search"></div> -->
+          <button class="btn btn-primary btn-search" ng-click='searchAirport()'>Search</button>
+
+        </div>
+      </div>
+
+      <!-- <div>
+            <button id="zoom_in" class="zoom-btn">+</button>
+            <button id="zoom_out" class="zoom-btn">-</button>
+      </div>
+      -->
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div id="map" eu-route-map></div>
+        </div>
+      </div>
+    </div>
     <script data-main="app/js/main.js" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.min.js"></script>
 
 
 
     <!-- FOOTER -->
     <footer class="l-footer container t-margin text-center">
-        <!-- CALL-TO-ACTION -->
-        <section>
-            <div class="container t-margin l-callout t-callout clearfix">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <h2>Consectetur adipisicing elit. Fuga accusantium quas aspernatur.</h2>
-                        <h3>Omnis dicta id hic veritatis animi?</h3>
-                    </div>
-                    <div class="col-lg-4 text-right">
-                        <button class="btn btn-primary" type="button">Buy Now</button>
-                        <button class="btn" type="button">Try it Free</button>
-                    </div>
-                </div>
+      <!-- CALL-TO-ACTION -->
+      <section>
+        <div class="container t-margin l-callout t-callout clearfix">
+          <div class="row">
+            <div class="col-lg-8">
+              <h2>Consectetur adipisicing elit. Fuga accusantium quas aspernatur.</h2>
+              <h3>Omnis dicta id hic veritatis animi?</h3>
             </div>
-        </section>
-
-        <p>&copy; Copyright 2014 Product name. <br>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia harum facere aspernatur voluptates, officiis necessitatibus laborum nostrum cupiditate, doloribus soluta, alias recusandae eveniet quo rem vitae facilis. Enim, asperiores, dolore.</p>
+            <div class="col-lg-4 text-right">
+              <button class="btn btn-primary" type="button">Buy Now</button>
+              <button class="btn" type="button">Try it Free</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <p>&copy; Copyright 2014 Product name. <br>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia harum facere aspernatur voluptates, officiis necessitatibus laborum nostrum cupiditate, doloribus soluta, alias recusandae eveniet quo rem vitae facilis. Enim, asperiores, dolore.</p>
     </footer>
 
 
-</body>
-
+  </body>
 </html>
