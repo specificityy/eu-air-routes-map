@@ -1,5 +1,8 @@
 # EU Airports routes map with D3.js and AngularJS
 
+### Live demo
+http://wilsonjs.github.io/eu-air-routes-map
+
 In order to run it you need to have <a href='http://nodejs.org/download/'>NPM</a> installed.
 
 Then download the source code.
