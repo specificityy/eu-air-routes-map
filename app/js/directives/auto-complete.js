@@ -19,7 +19,7 @@ define(['angular', 'directives/directives'], function(angular, directives) {
             scope.suggestions.length < 1 && setSuggestions();
 
             angular.forEach(scope.searchList, function(item, key) {
-              if (!checkSearchObject(item, scope.searchText)) {
+              if (!checkSearchObject(item, scope.vm.searchText)) {
                 removeSuggestion(item[scope.searchDisplay]);
               }
             });
@@ -27,7 +27,7 @@ define(['angular', 'directives/directives'], function(angular, directives) {
             console.log(scope.suggestions)
 
           } else {
-            (scope.searchList.indexOf(scope.searchText) === -1) && scope.searchList.unshift(scope.searchText);
+            (scope.searchList.indexOf(scope.vm.searchText) === -1) && scope.searchList.unshift(scope.vm.searchText);
             scope.suggestions = scope.searchList;
           }
 
@@ -86,7 +86,7 @@ define(['angular', 'directives/directives'], function(angular, directives) {
 
         scope.$watch('selectedIndex', function(val) {
           if (val !== -1) {
-            scope.searchText = scope.suggestions[scope.selectedIndex];
+            scope.vm.searchText = scope.suggestions[scope.selectedIndex];
           }
         });
 

@@ -1,7 +1,7 @@
 <div class="row" ng-if='airportsLoaded'>
 	<div class="col-md-3 search-div">
 
-	<input type="text" id="search" class="form-control" ng-keyup="checkAirport($event)" ng-model="search" ng-bind="data.search" placeholder='Search..'>
+	<input type="text" id="search" class="form-control" ng-keyup="checkAirport($event)" ng-model="vm.search" ng-bind="vm.search" placeholder='Search..'>
 	<!-- <div autocomplete='off' auto-complete search-list='airports' search-display='name' model="search"></div> -->
 	<button class="btn btn-primary btn-search" ng-click='searchAirport()'>Search</button>
 
