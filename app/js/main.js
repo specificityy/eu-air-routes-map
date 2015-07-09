@@ -63,7 +63,7 @@ require(
     'filters/filters',
     'controllers/controllers',
     'controllers/mapCtrl',
-    'services/arrangeLabelsSVc',
+    'services/arrangeLabelsSvc',
     'services/mapZoomSvc',
     'services/configSvc',
     'services/highlightAirportSvc',
