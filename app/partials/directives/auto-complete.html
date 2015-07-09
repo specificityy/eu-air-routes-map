@@ -1,0 +1,8 @@
+<div class="search-wrapper">
+    <input type="text" placeholder="Start typing" id="searchInput" ng-keydown="checkKeyDown($event)" class="form-control" ng-model="vm.searchText" ng-change="search()"/>
+    <ul id="suggestions" class="suggestions-list dropdown-menu" ng-show='suggestions.length>0'>
+   <li ng-repeat="suggestion in suggestions" class="blockSpan" ng-click="addToSelectedTags($index)" ng-mouseover="$parent.selectedIndex=$index" ng-class="{active : selectedIndex===$index}"> 
+     <a>{{suggestion}}</a>
+   </li>
+ </ul>
+</div>  

@@ -1,0 +1,23 @@
+/**
+ * ----------------------------------------------------------------------------------------
+ * Footer styles.
+ * ----------------------------------------------------------------------------------------
+ */
+
+.l-footer {
+	/*position: absolute;*/
+	width: 100%;
+	padding:0;
+	p {
+		color: $color-light-text;
+		font-size: 0.8rem;
+	}
+}
+
+.l-list-inline {
+	@include list-unstyled;
+
+	li {
+		display: inline;
+	}
+}
