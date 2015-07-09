@@ -1,6 +1,6 @@
 define(['angular', 'directives/directives'], function(angular, directives) {
 
-  return directives.directive("euRouteMap", function(configSvc, mapZoomSvc, arrangeLabelsSvc, highlightAirportSvc, mapHelpersSvc, $timeout) {
+  return directives.directive("euRouteMap", function(configSvc, mapZoomSvc, arrangeLabelsSvc, highlightAirportSvc, mapHelpersSvc) {
 
     return {
       restrict: 'EA',
