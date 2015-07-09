@@ -3,6 +3,8 @@
 ### Live demo
 http://wilsonjs.github.io/eu-air-routes-map
 
+<hr>
+
 In order to run it you need to have <a href='http://nodejs.org/download/'>NPM</a> installed.
 
 Then download the source code.
